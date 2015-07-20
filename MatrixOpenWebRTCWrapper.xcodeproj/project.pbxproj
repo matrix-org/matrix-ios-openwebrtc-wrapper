@@ -10,6 +10,7 @@
 		322942151B5D323B009C098C /* MatrixOpenWebRTCWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 322942141B5D323B009C098C /* MatrixOpenWebRTCWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3229421B1B5D323B009C098C /* MatrixOpenWebRTCWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3229420F1B5D323B009C098C /* MatrixOpenWebRTCWrapper.framework */; };
 		322942221B5D323B009C098C /* MatrixOpenWebRTCWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 322942211B5D323B009C098C /* MatrixOpenWebRTCWrapperTests.m */; };
+		59053281BF8842480C4C2D46 /* libPods-MatrixOpenWebRTCWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F35E4F0323172C6A9D63C8A8 /* libPods-MatrixOpenWebRTCWrapper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,9 @@
 		3229421A1B5D323B009C098C /* MatrixOpenWebRTCWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatrixOpenWebRTCWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		322942201B5D323B009C098C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		322942211B5D323B009C098C /* MatrixOpenWebRTCWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatrixOpenWebRTCWrapperTests.m; sourceTree = "<group>"; };
+		8A4AD5BE713A335DEE2AB6AF /* Pods-MatrixOpenWebRTCWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixOpenWebRTCWrapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixOpenWebRTCWrapper/Pods-MatrixOpenWebRTCWrapper.release.xcconfig"; sourceTree = "<group>"; };
+		B4A585F60A24620741E9A4C0 /* Pods-MatrixOpenWebRTCWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixOpenWebRTCWrapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixOpenWebRTCWrapper/Pods-MatrixOpenWebRTCWrapper.debug.xcconfig"; sourceTree = "<group>"; };
+		F35E4F0323172C6A9D63C8A8 /* libPods-MatrixOpenWebRTCWrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatrixOpenWebRTCWrapper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59053281BF8842480C4C2D46 /* libPods-MatrixOpenWebRTCWrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +55,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01AB7F2B78BDA9FC657E5078 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F35E4F0323172C6A9D63C8A8 /* libPods-MatrixOpenWebRTCWrapper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		322942051B5D323B009C098C = {
 			isa = PBXGroup;
 			children = (
 				322942111B5D323B009C098C /* MatrixOpenWebRTCWrapper */,
 				3229421E1B5D323B009C098C /* MatrixOpenWebRTCWrapperTests */,
 				322942101B5D323B009C098C /* Products */,
+				B9C466185193621FFD72F67E /* Pods */,
+				01AB7F2B78BDA9FC657E5078 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +117,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B9C466185193621FFD72F67E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4A585F60A24620741E9A4C0 /* Pods-MatrixOpenWebRTCWrapper.debug.xcconfig */,
+				8A4AD5BE713A335DEE2AB6AF /* Pods-MatrixOpenWebRTCWrapper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -120,10 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 322942251B5D323B009C098C /* Build configuration list for PBXNativeTarget "MatrixOpenWebRTCWrapper" */;
 			buildPhases = (
+				6F9A5B71F7574E6B21B1D85B /* Check Pods Manifest.lock */,
 				3229420A1B5D323B009C098C /* Sources */,
 				3229420B1B5D323B009C098C /* Frameworks */,
 				3229420C1B5D323B009C098C /* Headers */,
 				3229420D1B5D323B009C098C /* Resources */,
+				8266612F63136C208B5D0AA0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +229,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F9A5B71F7574E6B21B1D85B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8266612F63136C208B5D0AA0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatrixOpenWebRTCWrapper/Pods-MatrixOpenWebRTCWrapper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3229420A1B5D323B009C098C /* Sources */ = {
@@ -321,6 +380,7 @@
 		};
 		322942261B5D323B009C098C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4A585F60A24620741E9A4C0 /* Pods-MatrixOpenWebRTCWrapper.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -336,6 +396,7 @@
 		};
 		322942271B5D323B009C098C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A4AD5BE713A335DEE2AB6AF /* Pods-MatrixOpenWebRTCWrapper.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -398,6 +459,7 @@
 				322942271B5D323B009C098C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		322942281B5D323B009C098C /* Build configuration list for PBXNativeTarget "MatrixOpenWebRTCWrapperTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +468,7 @@
 				3229422A1B5D323B009C098C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

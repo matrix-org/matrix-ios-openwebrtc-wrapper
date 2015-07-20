@@ -1,0 +1,55 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Mantle (1.5.4):
+    - Mantle/extobjc (= 1.5.4)
+  - Mantle/extobjc (1.5.4)
+  - MatrixSDK (0.5.0):
+    - AFNetworking (~> 2.5.2)
+    - Mantle (~> 1.5)
+  - OpenWebRTC (0.3.1)
+  - OpenWebRTC-SDK (0.1.1):
+    - OpenWebRTC
+
+DEPENDENCIES:
+  - MatrixSDK (~> 0.5.0)
+  - OpenWebRTC-SDK (from `https://github.com/matrix-org/openwebrtc-ios-sdk.git`, branch
+    `cvo_support`)
+
+EXTERNAL SOURCES:
+  OpenWebRTC-SDK:
+    :branch: cvo_support
+    :git: https://github.com/matrix-org/openwebrtc-ios-sdk.git
+
+CHECKOUT OPTIONS:
+  OpenWebRTC-SDK:
+    :commit: 2e2fd572c22f73f1d6c42bf37697b33dd2af3cda
+    :git: https://github.com/matrix-org/openwebrtc-ios-sdk.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
+  MatrixSDK: 42f41a540460ca945985641c37cd77e8e2baedae
+  OpenWebRTC: 85be1caf6dc45b11106eacba93de61e3e52b1cf8
+  OpenWebRTC-SDK: fd66e49ab80e88ed1e55231ac875a4976dc3ba74
+
+COCOAPODS: 0.37.2
