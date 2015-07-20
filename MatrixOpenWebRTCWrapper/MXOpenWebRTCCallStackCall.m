@@ -14,9 +14,6 @@
  limitations under the License.
  */
 
-// OWR cannot be built for the iOS simulator (@see https://github.com/EricssonResearch/openwebrtc-examples/issues/79)
-#ifndef DISABLE_OPENWEBRTC_TO_BUID_TESTS
-
 #import "MXOpenWebRTCCallStackCall.h"
 
 @interface MXOpenWebRTCCallStackCall ()
@@ -249,5 +246,3 @@
 }
 
 @end
-
-#endif
