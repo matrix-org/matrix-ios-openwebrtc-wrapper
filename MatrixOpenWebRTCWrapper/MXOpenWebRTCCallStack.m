@@ -14,13 +14,30 @@
  limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
+// OWR cannot be built for the iOS simulator (@see https://github.com/EricssonResearch/openwebrtc-examples/issues/79)
+#ifndef DISABLE_OPENWEBRTC_TO_BUID_TESTS
 
-//! Project version number for MatrixOpenWebRTCWrapper.
-FOUNDATION_EXPORT double MatrixOpenWebRTCWrapperVersionNumber;
+#import "MXOpenWebRTCCallStack.h"
 
-//! Project version string for MatrixOpenWebRTCWrapper.
-FOUNDATION_EXPORT const unsigned char MatrixOpenWebRTCWrapperVersionString[];
+#import "MXOpenWebRTCCallStackCall.h"
 
-#import <MatrixOpenWebRTCWrapper/MXOpenWebRTCCallStack.h>
-#import <MatrixOpenWebRTCWrapper/MXOpenWebRTCCallStackCall.h>
+@implementation MXOpenWebRTCCallStack
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        [OpenWebRTC initialize];
+    }
+    return self;
+}
+
+- (id<MXCallStackCall>)createCall
+{
+    return [[MXOpenWebRTCCallStackCall alloc] init];
+}
+
+@end
+
+#endif

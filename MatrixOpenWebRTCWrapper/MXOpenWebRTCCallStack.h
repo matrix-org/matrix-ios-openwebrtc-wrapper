@@ -14,13 +14,18 @@
  limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-//! Project version number for MatrixOpenWebRTCWrapper.
-FOUNDATION_EXPORT double MatrixOpenWebRTCWrapperVersionNumber;
+#import "MXCallStack.h"
 
-//! Project version string for MatrixOpenWebRTCWrapper.
-FOUNDATION_EXPORT const unsigned char MatrixOpenWebRTCWrapperVersionString[];
+#import <OpenWebRTC-SDK/OpenWebRTC.h>
 
-#import <MatrixOpenWebRTCWrapper/MXOpenWebRTCCallStack.h>
-#import <MatrixOpenWebRTCWrapper/MXOpenWebRTCCallStackCall.h>
+/**
+ `MXOpenWebRTCCallStack` is the implementation of the `MXOpenWebRTCCall` protocol using
+ the OpenWebRTC iOS SDK.
+
+ @see https://github.com/EricssonResearch/openwebrtc-ios-sdk
+ */
+@interface MXOpenWebRTCCallStack : NSObject <MXCallStack>
+
+@end
