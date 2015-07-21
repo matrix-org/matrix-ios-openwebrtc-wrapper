@@ -8,6 +8,7 @@ It is a wrapper between matrix-ios-sdk (https://github.com/matrix-org/matrix-ios
 To enable OpenWebRTC into an application running the Matrix SDK:
 
 1) Add this lib into the application podfile::
+
     pod 'MatrixOpenWebRTCWrapper'
 
 2) Pass an instance of it to the Matrix SDK MXSession object::
