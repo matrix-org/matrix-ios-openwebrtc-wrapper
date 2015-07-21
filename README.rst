@@ -16,3 +16,8 @@ To enable OpenWebRTC into an application running the Matrix SDK:
     id<MXCallStack> callStack = [[MXOpenWebRTCCallStack alloc] init];
     [mxSession enableVoIPWithCallStack:callStack];
     
+2) Or, if you use MatrixKit, pass the MXOpenWebRTCCallStack class to the MXKAccountManager before opening any MXSession instances::
+
+    MXKAccountManager *accountManager = [MXKAccountManager sharedManager];
+    accountManager.callStackClass = [MXOpenWebRTCCallStack class];
+
