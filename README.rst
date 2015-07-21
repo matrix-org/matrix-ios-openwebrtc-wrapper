@@ -7,17 +7,26 @@ It is a wrapper between matrix-ios-sdk (https://github.com/matrix-org/matrix-ios
 
 To enable OpenWebRTC into an application running the Matrix SDK:
 
-1) Add this lib into the application podfile::
+1. Add this lib into the application podfile (note it has not been submitted yet to CocoaPods)::
 
-    pod 'MatrixOpenWebRTCWrapper'
+    # MatrixOpenWebRTCWrapper
+    pod 'MatrixOpenWebRTCWrapper', :git => 'https://github.com/matrix-org/matrix-ios-openwebrtc-wrapper.git', :branch => 'master'
+    
+    # OpenWebRTC-SDK (Matrix.org fork of it)
+    pod 'OpenWebRTC-SDK', :git => 'https://github.com/matrix-org/openwebrtc-ios-sdk.git', :branch => 'cvo_support'
 
-2) Pass an instance of it to the Matrix SDK MXSession object::
+
+2. Pass an instance of it to the Matrix SDK MXSession object::
 
     id<MXCallStack> callStack = [[MXOpenWebRTCCallStack alloc] init];
     [mxSession enableVoIPWithCallStack:callStack];
     
-2) Or, if you use MatrixKit, pass the MXOpenWebRTCCallStack class to the MXKAccountManager before opening any MXSession instances::
+2. Or, if you use MatrixKit, pass the MXOpenWebRTCCallStack class to the MXKAccountManager before opening any MXSession instances::
 
     MXKAccountManager *accountManager = [MXKAccountManager sharedManager];
     accountManager.callStackClass = [MXOpenWebRTCCallStack class];
 
+
+Known issues
+============
+1. The lib does not build for iOS simulator. The reason is that OpenWebRTC-SDK does not provide libraries built for x86_64 architecture. See https://github.com/EricssonResearch/openwebrtc-examples/issues/79.
