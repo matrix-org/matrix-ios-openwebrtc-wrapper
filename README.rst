@@ -5,6 +5,8 @@ This library enables OpenWebRTC voice and video calls in a Matrix application.
 
 It is a wrapper between matrix-ios-sdk (https://github.com/matrix-org/matrix-ios-sdk) and openwebrtc-ios-sdk (https://github.com/EricssonResearch/openwebrtc-ios-sdk). It implements the VoIP protocol defined in MatrixSDK by using the OpenWebRTC iOS SDK.
 
+**Warning:** Both openwebrtc-ios-sdk and VoIP in matrix-ios-sdk are for experimental purpose. Do not use matrix-ios-openwebrtc-wrapper in commercial products.
+
 To enable OpenWebRTC into an application running the Matrix SDK:
 
 1. Add this lib into the application podfile (note it has not been submitted yet to CocoaPods)::
