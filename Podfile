@@ -4,7 +4,8 @@
 target 'MatrixOpenWebRTCWrapper' do
 
 # The Matrix SDK that declares the protocols to implement for VoIP
-pod 'MatrixSDK', '~> 0.5.0'
+#pod 'MatrixSDK', '~> 0.5.4’
+pod 'MatrixSDK', :git => 'https://github.com/matrix-org/matrix-ios-sdk.git', :branch => 'develop'
 
 # Matrix.org fork of 'OpenWebRTC-SDK'
 #pod 'OpenWebRTC-SDK', :path => '../openwebrtc-ios-sdk/OpenWebRTC-SDK.podspec'

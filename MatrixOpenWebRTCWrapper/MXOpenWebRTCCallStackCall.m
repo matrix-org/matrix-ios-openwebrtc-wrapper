@@ -49,7 +49,7 @@
 @end
 
 @implementation MXOpenWebRTCCallStackCall
-@synthesize selfVideoView, remoteVideoView;
+@synthesize selfVideoView, remoteVideoView, delegate;
 
 - (instancetype)init
 {
@@ -225,14 +225,14 @@
 
 
 #pragma mark - Properties
-- (UIDeviceOrientation)videoOrientation
+- (UIDeviceOrientation)selfOrientation
 {
     return openWebRTCHandler.videoOrientation;
 }
 
-- (void)setVideoOrientation:(UIDeviceOrientation)videoOrientation
+- (void)setSelfOrientation:(UIDeviceOrientation)selfOrientation
 {
-    openWebRTCHandler.videoOrientation = videoOrientation;
+    openWebRTCHandler.videoOrientation = selfOrientation;
 }
 
 #pragma mark - Private methods

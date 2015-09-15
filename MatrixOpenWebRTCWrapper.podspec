@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MatrixOpenWebRTCWrapper"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Wrapper lib to enable OpenWebRTC voice and video calls in application running MatrixSDK"
 
   s.description  = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "6.0"
 
-  s.source       = { :git => "https://github.com/matrix-org/matrix-ios-sdk.git", :tag => "v0.0.1" }
+  s.source       = { :git => "https://github.com/matrix-org/matrix-ios-sdk.git", :tag => "v0.5.4" }
   s.source_files  = "MatrixOpenWebRTCWrapper", "MatrixOpenWebRTCWrapper/*.{h,m}"
 
   s.requires_arc  = true
