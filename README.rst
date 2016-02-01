@@ -28,7 +28,3 @@ To enable OpenWebRTC into an application running the Matrix SDK:
     MXKAccountManager *accountManager = [MXKAccountManager sharedManager];
     accountManager.callStackClass = [MXOpenWebRTCCallStack class];
 
-
-Known issues
-============
-1. The lib does not build for iOS simulator because OpenWebRTC-SDK does not provide libraries built for x86_64 architecture. See https://github.com/EricssonResearch/openwebrtc-examples/issues/79.
