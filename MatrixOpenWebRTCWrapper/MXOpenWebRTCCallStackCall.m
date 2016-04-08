@@ -199,7 +199,7 @@
     NSLog(@"[MXOpenWebRTCCallStack] candidateGenerate: %@", candidate);
 }
 
-- (void)gotLocalSourcesWithNames:(NSArray *)names
+- (void)gotLocalSources:(NSArray *)sources
 {
     dispatch_async(dispatch_get_main_queue(), ^{
 
@@ -211,7 +211,7 @@
     });
 }
 
-- (void)gotRemoteSourceWithName:(NSString *)name
+- (void)gotRemoteSource:(NSDictionary *)source
 {
     dispatch_async(dispatch_get_main_queue(), ^{
 
@@ -227,12 +227,52 @@
 #pragma mark - Properties
 - (UIDeviceOrientation)selfOrientation
 {
-    return openWebRTCHandler.videoOrientation;
+    UIDeviceOrientation selfOrientation;
+    NSInteger orientation = [openWebRTCHandler rotationForVideoView:selfVideoView];
+
+    switch ([[UIDevice currentDevice] orientation]) {
+        case 180:
+            selfOrientation = UIDeviceOrientationLandscapeLeft;
+            break;
+        case 0:
+            selfOrientation = UIDeviceOrientationLandscapeRight;
+            break;
+        case 90:
+            selfOrientation = UIDeviceOrientationPortrait;
+            break;
+        case 270:
+            selfOrientation = UIDeviceOrientationPortraitUpsideDown;
+            break;
+        default:
+            selfOrientation = 0;
+            break;
+    };
+
+    return selfOrientation;
 }
 
 - (void)setSelfOrientation:(UIDeviceOrientation)selfOrientation
 {
-    openWebRTCHandler.videoOrientation = selfOrientation;
+    NSInteger orientation;
+    switch ([[UIDevice currentDevice] orientation]) {
+        case UIDeviceOrientationLandscapeLeft:
+            orientation = 180;
+            break;
+        case UIDeviceOrientationLandscapeRight:
+            orientation = 0;
+            break;
+        case UIDeviceOrientationPortrait:
+            orientation = 90;
+            break;
+        case UIDeviceOrientationPortraitUpsideDown:
+            orientation = 270;
+            break;
+        default:
+            orientation = 0;
+            break;
+    };
+
+    [openWebRTCHandler videoView:selfVideoView setVideoRotation:orientation - 90];
 }
 
 #pragma mark - Private methods

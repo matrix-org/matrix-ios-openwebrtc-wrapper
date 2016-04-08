@@ -25,7 +25,7 @@
     self = [super init];
     if (self)
     {
-        [OpenWebRTC initialize];
+        [OpenWebRTC initOpenWebRTC];
     }
     return self;
 }
